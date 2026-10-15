@@ -6,9 +6,11 @@
 
 This project will analyse the selected retail inventory and demand dataset using Microsoft Excel and Microsoft Power BI. The Markdown proposal is [PERSONAL PROJECT PROPOSAL.md](docs/PERSONAL%20PROJECT%20PROPOSAL.md), converted from the original `docs/PERSONAL PROJECT PROPOSAL.odt`.
 
-## Project management baseline
+## Project management
 
-**PM-01 — Confirm scope and project plan: Complete (15 October 2026).** The baseline proposal and requested folder structure are prepared. Dataset acquisition, provenance, and licence verification are tracked separately under PM-02; `data/raw/sales_data.csv` is present. See the [PM-01 to PM-14 tracker](docs/Project_Management_Plan_INV-02.docx).
+**PM-01 — Confirm scope and project plan: Complete.** The project scope and baseline plan are documented in the [proposal](docs/PERSONAL%20PROJECT%20PROPOSAL.md).
+
+**PM-02 — Source and document dataset: In progress.** `sales_data.csv` is present; verify source and licence before use.
 
 ## Project structure
 

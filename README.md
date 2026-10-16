@@ -2,74 +2,53 @@
 
 **Project ID:** INV-02  
 **Author:** Kbrom Gebremedihin  
-**Status:** Project structure and baseline documentation created; data analysis has not started.
+**Tools:** Microsoft Excel, Microsoft Power BI
 
-This project will analyse the selected retail inventory and demand dataset using Microsoft Excel and Microsoft Power BI. The Markdown proposal is [PERSONAL PROJECT PROPOSAL.md](docs/PERSONAL%20PROJECT%20PROPOSAL.md), converted from the original `docs/PERSONAL PROJECT PROPOSAL.odt`.
+Analyse retail demand and inventory data, validate relevant KPIs, and present evidence-based findings in a dashboard.
 
-## Project management
+## Project status
 
-**PM-01 — Confirm scope and project plan: Complete.** The project scope and baseline plan are documented in the [proposal](docs/PERSONAL%20PROJECT%20PROPOSAL.md).
+**PM-01 — Confirm scope and project plan:**
+ Defined the project aim, objectives, scope, methodology, deliverables, tools, and two-week schedule; established KPI interpretation safeguards and the project folder structure in the baseline proposal.
 
-**PM-02 — Source and document dataset: In progress.** `sales_data.csv` is present; verify source and licence before use.
+**PM-02 — Source and document dataset:**
+ Placed `sales_data.csv` in `data/raw/` and recorded the proposed Kaggle source. The raw file is preserved unchanged; source provenance and licence terms still need verification before use or publication.
 
-## Project structure
+**PM-03 — Initial data profile:**
+ Performed initial checks on the raw data and recorded the results in the README. No blank values, parse failures, or duplicates were found in the initial checks. 
 
-```text
-Inventory-Demand-Analysis/
-├── data/
-│   ├── raw/                 # Original source files; never edit in place
-│   └── cleaned/             # Validated, separately saved data
-├── excel/                   # Inventory_Demand_Analysis.xlsx (to be created)
-├── powerbi/                 # Inventory_Demand_Dashboard.pbix (to be created)
-├── reports/                 # Reserved for future reports, if needed
-├── docs/
-│   ├── PERSONAL PROJECT PROPOSAL.md
-│   ├── PERSONAL PROJECT PROPOSAL.odt
-│   └── Project_Management_Plan_INV-02.docx
-└── images/                  # Dashboard preview to be created
-```
+## Dataset
 
-## Dataset and current status
+Raw data: [`data/raw/sales_data.csv`](data/raw/sales_data.csv)  
+Proposed source: [Kaggle — Retail Store Inventory and Demand Forecasting](https://www.kaggle.com/dsv/11895299)
 
-The proposal identifies `sales_data.csv` from the Kaggle Retail Store Inventory and Demand Forecasting dataset as the intended source ([dataset page](https://www.kaggle.com/dsv/11895299)). A CSV is now present at `data/raw/sales_data.csv`; it has not yet been independently profiled here. Confirm its source and licence/redistribution terms before analysis or publication. Keep the original unchanged and save any cleaned data separately under `data/cleaned/`.
+Keep the original CSV unchanged. Confirm provenance, licence, and field definitions before use or publication.
 
-The existing proposal reports an initial profile of 76,000 records, 16 columns, 1 January 2022–30 January 2024, five stores, 20 products, five categories, four regions, no missing values, and no exact duplicate rows. These are **unverified proposal figures**, not results reproduced in this workspace. Verify them against the CSV before reporting them as project findings.
+### Initial profile
 
-## Tools and workflow
+| Check | Result |
+|---|---|
+| Size | 76,000 rows, 16 columns |
+| Dates | 1 January 2022–30 January 2024 (`dd/MM/yyyy`) |
+| Stores / products | 5 / 20 |
+| Categories / regions | 5 / 4 |
+| Blank values / parse failures | None found in initial checks |
+| Exact duplicates / duplicate date-store-product keys | 0 / 0 |
 
-Planned primary tools are Microsoft Excel and Microsoft Power BI. The workflow is to preserve the original CSV, profile and validate it, clean a separate copy, validate KPI calculations, build the Excel analysis, then create the dashboard and evidence-based reports. The [PM-01 to PM-14 tracker](docs/Project_Management_Plan_INV-02.docx) records status, completion date, issues, and Git commit for each task.
+Initial checks are not a substitute for validating business definitions, units, and plausible values.
 
-## KPI guardrails
+## Workflow
 
-Candidate measures include total units sold, total recorded demand, total units ordered, average recorded inventory, zero-inventory record rate, and demand–sales difference. Each definition and aggregation must be checked against the actual data before dashboard use.
+Preserve and verify the source, profile and clean a separate copy, validate KPI calculations, then build the Excel analysis and Power BI dashboard. Record cleaning decisions and keep the cleaned data in `data/cleaned/`.
 
-- Zero recorded inventory alone does not establish a stockout.
-- Demand minus units sold is not confirmed lost sales.
-- Units ordered do not necessarily equal units received.
-- Inventory turnover will not be reported without validated cost-of-goods-sold and average inventory valuation data.
-- Observed associations are not evidence of causation.
+## KPI safeguards
 
-## Recommended data documentation
+Candidate KPIs include units sold, recorded demand, units ordered, and inventory levels. Validate each definition and aggregation before use. Zero inventory does not prove a stockout; demand less units sold is not confirmed lost sales; orders are not necessarily receipts. Do not claim inventory turnover without validated cost-of-goods-sold and inventory valuation data.
 
-Maintain a data dictionary and cleaning log as analysis proceeds, even though they are not separate project files. Verify the actual CSV's field names, types, units, valid values, nullability, business definitions, and record grain. The proposal anticipates fields for date, store, product, category, region, inventory level, units sold, units ordered, price, discount, weather condition, promotion, competitor pricing, seasonality, epidemic indicator, and demand; confirm these against the file before relying on them.
-
-Keep `data/raw/sales_data.csv` unchanged. For every cleaning action, record the date, field, issue, rationale, row counts before and after, validation performed, and cleaned output path. Check missing values, exact and key duplicates, types, ranges, category consistency, and plausible values; save the cleaned copy separately under `data/cleaned/`.
-
-## Recommended data quality checks
-
-Document the measured results here after profiling the CSV; do not treat proposal-reported figures as verified. Check completeness (including null-like strings), exact-row and candidate-key duplicates, date parsing and coverage, numeric types and plausible ranges, category consistency, and mappings between product, store, and region. Confirm the actual record grain before using a candidate key such as date + store + product. Reconcile important totals and KPI calculations between Excel and Power BI.
-
-Report any issues, their impact, and the action taken. A zero missing-value or exact-duplicate count does not prove the data is logically correct or complete. Confirm field definitions and units from source documentation. Neither zero inventory nor demand greater than units sold independently establishes a stockout or lost sale.
-
-## Recommended business insights
-
-Add findings and recommendations here after profiling the data and validating the relevant KPIs. For each finding, state the business question, measure and comparison, result, and evidence or caveats. Examine demand trends over comparable periods; demand by product and category; recorded demand versus units sold; inventory levels; ordering activity; and observed differences by promotion, discount, price, weather, or season.
-
-Do not fill in results before analysis. Recommendations should follow from validated evidence, not assumptions. A zero-inventory record does not prove a stockout, demand less units sold is not confirmed lost sales, units ordered do not necessarily equal receipts, and observed associations do not establish causation. Report inventory turnover only if the required cost-of-goods-sold and average inventory valuation data are available and validated.
-
-No Excel workbook, Power BI file, or dashboard image has been generated yet; creating empty files with those extensions would imply usable deliverables that do not exist.
-
-## Reports and documentation
+## Documentation
 
 - [Project proposal](docs/PERSONAL%20PROJECT%20PROPOSAL.md)
-- [Project management plan and tracker](docs/Project_Management_Plan_INV-02.docx)
+- [Project management plan](docs/Project_Management_Plan_INV-02.docx)
+
+**PM-04 — Clean and prepare data in Excel:**
+ Preserved the raw CSV, standardized dates and numeric values, trimmed text, and removed no rows. Created the [cleaned dataset](data/cleaned/sales_data_cleaned.csv) and [Excel workbook](excel/Inventory_Demand_Analysis.xlsx).

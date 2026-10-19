@@ -42,3 +42,11 @@ Reconciled all 76,000 rows between raw and cleaned files; confirmed no missing v
 ## PM-06 — Create Excel calculations and PivotTables
 
 Added calculated month, demand-gap, and zero-inventory fields, an analysis summary, four PivotTables (monthly, store/region, product, and promotion/seasonality), and a monthly sales-and-demand chart to the [Excel analysis workbook](excel/Inventory_Demand_Analysis.xlsx). Independently checked the PivotTable results against the cleaned CSV. Category comparisons remain excluded because product-to-category mappings are inconsistent.
+
+## PM-07 — Complete exploratory analysis
+Initial descriptive findings from the synthetic dataset:
+- Average units sold per record were 2.1% lower in 2023 than in 2022; January 2024 is a partial year and is not directly comparable.
+- Summer averaged 95.8 units sold per record versus 83.5 in spring.
+- Promotion-flagged records averaged 103.1 units sold versus 81.8 without a promotion. This is an association, not evidence that promotions caused higher sales.
+
+These patterns describe the supplied synthetic records only and should not be generalized to real retailers.

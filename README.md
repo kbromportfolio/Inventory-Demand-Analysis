@@ -50,3 +50,14 @@ Initial descriptive findings from the synthetic dataset:
 - Promotion-flagged records averaged 103.1 units sold versus 81.8 without a promotion. This is an association, not evidence that promotions caused higher sales.
 
 These patterns describe the supplied synthetic records only and should not be generalized to real retailers.
+
+## PM-08 — Compare products, stores, regions, and periods
+
+Compared average units sold per record to account for differing group sizes:
+
+- **Products:** Product IDs ranged from 73.1 units (P0020) to 99.9 (P0007) per record, a 36.6% spread. Comparisons use IDs only; category mappings are unreliable.
+- **Stores:** S002 averaged 91.2 units per record, the highest; S004 averaged 86.1, the lowest.
+- **Regions:** South averaged 91.2 units per record and West 86.1. North contains two stores, so regional totals are not directly comparable.
+- **Periods:** The 2023 average was 2.1% below 2022. January 2024 is partial and excluded from full-year comparison.
+
+These are descriptive differences in the synthetic dataset, not evidence of real-world performance.

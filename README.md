@@ -61,3 +61,7 @@ Compared average units sold per record to account for differing group sizes:
 - **Periods:** The 2023 average was 2.1% below 2022. January 2024 is partial and excluded from full-year comparison.
 
 These are descriptive differences in the synthetic dataset, not evidence of real-world performance.
+
+## PM-09 — Define and validate KPIs
+
+Added a [KPI Reference sheet](excel/Inventory_Demand_Analysis.xlsx) defining seven measures, their Excel calculations, current results, PM-05 arithmetic checks, and interpretation safeguards. All applicable checks pass; average recorded demand is included as a descriptive measure but was not part of PM-05 validation. Business definitions remain provisional because the data is synthetic.

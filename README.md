@@ -64,4 +64,10 @@ These are descriptive differences in the synthetic dataset, not evidence of real
 
 ## PM-09 — Define and validate KPIs
 
-Added a [KPI Reference sheet](excel/Inventory_Demand_Analysis.xlsx) defining seven measures, their Excel calculations, current results, PM-05 arithmetic checks, and interpretation safeguards. All applicable checks pass; average recorded demand is included as a descriptive measure but was not part of PM-05 validation. Business definitions remain provisional because the data is synthetic.
+Added a [KPI Reference sheet](excel/Inventory_Demand_Analysis.xlsx) defining seven measures, their Excel calculations, current results, arithmetic checks, and interpretation safeguards. All applicable checks pass; average recorded demand is included as a descriptive measure.
+
+## PM-10 — Build interactive Power BI dashboard
+
+Created the [Power BI dashboard](powerbi/Inventory_Demand_Analysis.pbix) from the cleaned dataset. The single-page report includes KPI cards for total units sold, total recorded demand, total units ordered, and average inventory per record; a demand-over-time chart; average units sold by season; and average inventory by store.
+
+Store, region, and date slicers filter the report interactively. The dashboard opens without a store or region preselected. Category comparisons are excluded because product-to-category mappings are inconsistent. Recorded demand is not confirmed lost sales, and all results describe the supplied synthetic dataset rather than a real retailer.

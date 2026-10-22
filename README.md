@@ -82,15 +82,17 @@ Store, region, and date slicers filter the report interactively. The dashboard o
 
 ## PM-12 — Complete project documentation
 
-Added a static, data-derived dashboard summary and supporting chart images. The summary is a portfolio visual, not a screenshot of the interactive Power BI report.
+Added static, data-derived dashboard visuals:
 
-![Static dashboard summary](images/dashboard_summary.png)
+![Static dashboard summary](reports/dashboard.png)
 
-**Supporting charts:** [Monthly sales and demand](images/monthly_sales_demand.png) · [Seasonal sales and demand](images/seasonal_sales_demand.png) · [Average sales by store](images/store_sales_comparison.png)
-
-**Pivot visuals:** [Context Pivot](images/context_pivot.png) · [Store Pivot](images/store_pivot.png)
+**Supporting chart:** [Average sales by store](reports/store_sales_comparison.png)
 
 Explore the [interactive Power BI dashboard](powerbi/Inventory_Demand_Analysis.pbix) for slicers and filtering.
+
+## PM-13 — Organise and publish GitHub repository
+
+Organised project files into `data/`, `docs/`, `excel/`, `powerbi/`, and `reports/`. The repository is published at [kbromportfolio/Inventory-Demand-Analysis](https://github.com/kbromportfolio/Inventory-Demand-Analysis).
 
 ## Conclusion
 

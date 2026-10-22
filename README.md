@@ -73,13 +73,24 @@ Created the [Power BI dashboard](powerbi/Inventory_Demand_Analysis.pbix) from th
 Store, region, and date slicers filter the report interactively. The dashboard opens without a store or region preselected. Category comparisons are excluded because product-to-category mappings are inconsistent. Recorded demand is not confirmed lost sales, and all results describe the supplied synthetic dataset rather than a real retailer.
 
 ## PM-11 — Interpret results and prepare recommendations
-
 - Average units sold fell **2.15%** from 2022 to 2023. Store averages ranged from **91.2 (S002)** to **86.1 (S004)**; product averages ranged from **99.9 (P0007)** to **73.1 (P0020)**. January 2024 is partial, and category mappings are inconsistent.
 
 ### Recommendations
 
 - Validate demand and inventory records before estimating lost sales or setting stock targets.
 - Test seasonal replenishment and promotion impact using real store/SKU data before acting.
+
+## PM-12 — Complete project documentation
+
+Added a static, data-derived dashboard summary and supporting chart images. The summary is a portfolio visual, not a screenshot of the interactive Power BI report.
+
+![Static dashboard summary](images/dashboard_summary.png)
+
+**Supporting charts:** [Monthly sales and demand](images/monthly_sales_demand.png) · [Seasonal sales and demand](images/seasonal_sales_demand.png) · [Average sales by store](images/store_sales_comparison.png)
+
+**Pivot visuals:** [Context Pivot](images/context_pivot.png) · [Store Pivot](images/store_pivot.png)
+
+Explore the [interactive Power BI dashboard](powerbi/Inventory_Demand_Analysis.pbix) for slicers and filtering.
 
 ## Conclusion
 

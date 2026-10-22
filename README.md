@@ -94,6 +94,10 @@ Explore the [interactive Power BI dashboard](powerbi/Inventory_Demand_Analysis.p
 
 Organised project files into `data/`, `docs/`, `excel/`, `powerbi/`, and `reports/`. The repository is published at [kbromportfolio/Inventory-Demand-Analysis](https://github.com/kbromportfolio/Inventory-Demand-Analysis).
 
+## PM-14 — Review, test, and finalise project
+
+Final checks passed: raw and cleaned CSVs reconcile across all 76,000 rows; dates parse day-first; key totals and duplicate checks match; the Excel workbook is valid and contains PivotTables and a chart; dashboard PNGs validate; and all local README links resolve. The Power BI file is present; interactive behavior should be reviewed in Power BI Desktop.
+
 ## Conclusion
 
 The strongest practical next step is to validate the meaning and relationship of demand, sales, inventory, and orders using real operational records. If the seasonal and promotion patterns persist after that validation, test targeted, measurable interventions at store/SKU level. Until then, use this report as a documented interpretation of the supplied synthetic dataset, not as an operating plan.

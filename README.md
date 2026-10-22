@@ -33,7 +33,7 @@ Profiled the raw CSV: 76,000 records and 16 fields, dated 1 January 2022–30 Ja
 
 ## PM-04 — Clean and prepare data
 
-Preserved the raw CSV and prepared a separate [cleaned file](data/cleaned/sales_data_cleaned.csv). Standardized dates from `dd/MM/yyyy` to ISO `yyyy-MM-dd`; all 76,000 dates parsed successfully. Confirmed 76,000 rows, 16 columns, and unchanged non-date values. No rows were removed.
+Preserved the raw CSV and prepared a separate [cleaned file](data/cleaned/sales_data_cleaned.csv). The raw and cleaned CSVs retain dates in `dd/MM/yyyy` format; all 76,000 dates parse successfully using a day-first interpretation. Confirmed 76,000 rows, 16 columns, and unchanged non-date values. No rows were removed.
 
 ## PM-05 — Validate data and calculations
 
@@ -71,3 +71,16 @@ Added a [KPI Reference sheet](excel/Inventory_Demand_Analysis.xlsx) defining sev
 Created the [Power BI dashboard](powerbi/Inventory_Demand_Analysis.pbix) from the cleaned dataset. The single-page report includes KPI cards for total units sold, total recorded demand, total units ordered, and average inventory per record; a demand-over-time chart; average units sold by season; and average inventory by store.
 
 Store, region, and date slicers filter the report interactively. The dashboard opens without a store or region preselected. Category comparisons are excluded because product-to-category mappings are inconsistent. Recorded demand is not confirmed lost sales, and all results describe the supplied synthetic dataset rather than a real retailer.
+
+## PM-11 — Interpret results and prepare recommendations
+
+- Average units sold fell **2.15%** from 2022 to 2023. Store averages ranged from **91.2 (S002)** to **86.1 (S004)**; product averages ranged from **99.9 (P0007)** to **73.1 (P0020)**. January 2024 is partial, and category mappings are inconsistent.
+
+### Recommendations
+
+- Validate demand and inventory records before estimating lost sales or setting stock targets.
+- Test seasonal replenishment and promotion impact using real store/SKU data before acting.
+
+## Conclusion
+
+The strongest practical next step is to validate the meaning and relationship of demand, sales, inventory, and orders using real operational records. If the seasonal and promotion patterns persist after that validation, test targeted, measurable interventions at store/SKU level. Until then, use this report as a documented interpretation of the supplied synthetic dataset, not as an operating plan.
